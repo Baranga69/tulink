@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tulink/background.dart';
 
 class NavBar extends StatefulWidget {
   @override
@@ -6,48 +7,18 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
- 
- int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: HOME',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: DISCOVER',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: FAVORITES',
-      style: optionStyle,
-    ),
-     Text(
-      'Index 3: CREATE',
-      style: optionStyle,
-    ),
-     Text(
-      'Index 4: PROFILE',
-      style: optionStyle,
-    ),
-  ];
-
+  int _selectedIndex = 0;
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
   }
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Choose a Supplier'),
-      ),
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
-      ),
+      backgroundColor: Colors.white,
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -78,5 +49,3 @@ class _NavBarState extends State<NavBar> {
     );
   }
 }
-
-

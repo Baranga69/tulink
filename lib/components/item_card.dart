@@ -12,7 +12,7 @@ class ItemCard extends StatelessWidget {
             return ChooseSupplier();
           }));
         },
-        splashColor: Colors.purple.withOpacity(70),
+        splashColor: Colors.purple.withAlpha(70),
         child: Container(
           child: ClipRRect(
             borderRadius: BorderRadius.circular(20.0),
